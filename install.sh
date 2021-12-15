@@ -113,6 +113,7 @@ if [[ $FILE == *.zip ]]; then
   echo -e "\e[1;33m Checking for unzip command... \e[0m"
   if ! command -v unzip &> /dev/null; then
     echo -e "\e[1;33m unzip not found, installing... \e[0m"
+    apt update
     apt install unzip -y
   fi
 fi
